@@ -4,7 +4,7 @@ github.com/Microsoft/go-winio/backuptar
 github.com/Microsoft/go-winio/pkg/guid
 github.com/Microsoft/go-winio/pkg/security
 github.com/Microsoft/go-winio/vhd
-# github.com/Microsoft/hcsshim v0.8.25
+# github.com/Microsoft/hcsshim v0.9.10
 github.com/Microsoft/hcsshim
 github.com/Microsoft/hcsshim/computestorage
 github.com/Microsoft/hcsshim/internal/cow
@@ -14,11 +14,13 @@ github.com/Microsoft/hcsshim/internal/hcs/schema2
 github.com/Microsoft/hcsshim/internal/hcserror
 github.com/Microsoft/hcsshim/internal/hns
 github.com/Microsoft/hcsshim/internal/interop
+github.com/Microsoft/hcsshim/internal/jobobject
 github.com/Microsoft/hcsshim/internal/log
 github.com/Microsoft/hcsshim/internal/logfields
 github.com/Microsoft/hcsshim/internal/longpath
 github.com/Microsoft/hcsshim/internal/mergemaps
 github.com/Microsoft/hcsshim/internal/oc
+github.com/Microsoft/hcsshim/internal/queue
 github.com/Microsoft/hcsshim/internal/safefile
 github.com/Microsoft/hcsshim/internal/timeout
 github.com/Microsoft/hcsshim/internal/vmcompute
@@ -26,11 +28,9 @@ github.com/Microsoft/hcsshim/internal/wclayer
 github.com/Microsoft/hcsshim/internal/winapi
 github.com/Microsoft/hcsshim/osversion
 github.com/Microsoft/hcsshim/pkg/ociwclayer
-# github.com/bits-and-blooms/bitset v1.2.0
-github.com/bits-and-blooms/bitset
-# github.com/containerd/cgroups v1.0.3
+# github.com/containerd/cgroups v1.0.4
 github.com/containerd/cgroups/stats/v1
-# github.com/containerd/containerd v1.5.18
+# github.com/containerd/containerd v1.6.26
 ## explicit
 github.com/containerd/containerd
 github.com/containerd/containerd/api/services/containers/v1
@@ -48,6 +48,7 @@ github.com/containerd/containerd/api/types
 github.com/containerd/containerd/api/types/task
 github.com/containerd/containerd/archive
 github.com/containerd/containerd/archive/compression
+github.com/containerd/containerd/archive/tarheader
 github.com/containerd/containerd/cio
 github.com/containerd/containerd/containers
 github.com/containerd/containerd/content
@@ -69,7 +70,10 @@ github.com/containerd/containerd/mount
 github.com/containerd/containerd/namespaces
 github.com/containerd/containerd/oci
 github.com/containerd/containerd/pkg/cap
+github.com/containerd/containerd/pkg/deprecation
 github.com/containerd/containerd/pkg/dialer
+github.com/containerd/containerd/pkg/kmutex
+github.com/containerd/containerd/pkg/randutil
 github.com/containerd/containerd/pkg/userns
 github.com/containerd/containerd/platforms
 github.com/containerd/containerd/plugin
@@ -85,6 +89,7 @@ github.com/containerd/containerd/runtime/linux/runctypes
 github.com/containerd/containerd/runtime/v2/runc/options
 github.com/containerd/containerd/services
 github.com/containerd/containerd/services/introspection
+github.com/containerd/containerd/services/warning
 github.com/containerd/containerd/snapshots
 github.com/containerd/containerd/snapshots/proxy
 github.com/containerd/containerd/sys
@@ -94,7 +99,9 @@ github.com/containerd/continuity/fs
 github.com/containerd/continuity/sysx
 # github.com/containerd/fifo v1.0.0
 github.com/containerd/fifo
-# github.com/containerd/ttrpc v1.1.0
+# github.com/containerd/log v0.1.0
+github.com/containerd/log
+# github.com/containerd/ttrpc v1.1.2
 github.com/containerd/ttrpc
 # github.com/containerd/typeurl v1.0.2
 github.com/containerd/typeurl
@@ -108,9 +115,9 @@ github.com/gogo/protobuf/proto
 github.com/gogo/protobuf/protoc-gen-gogo/descriptor
 github.com/gogo/protobuf/sortkeys
 github.com/gogo/protobuf/types
-# github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e
+# github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da
 github.com/golang/groupcache/lru
-# github.com/golang/protobuf v1.5.2
+# github.com/golang/protobuf v1.5.3
 github.com/golang/protobuf/jsonpb
 github.com/golang/protobuf/proto
 github.com/golang/protobuf/ptypes
@@ -119,45 +126,50 @@ github.com/golang/protobuf/ptypes/duration
 github.com/golang/protobuf/ptypes/timestamp
 # github.com/google/uuid v1.3.0
 github.com/google/uuid
-# github.com/klauspost/compress v1.11.13
+# github.com/klauspost/compress v1.15.9
+github.com/klauspost/compress
 github.com/klauspost/compress/fse
 github.com/klauspost/compress/huff0
-github.com/klauspost/compress/snappy
+github.com/klauspost/compress/internal/cpuinfo
+github.com/klauspost/compress/internal/snapref
 github.com/klauspost/compress/zstd
 github.com/klauspost/compress/zstd/internal/xxhash
 # github.com/moby/locker v1.0.1
 github.com/moby/locker
-# github.com/moby/sys/mountinfo v0.4.1
+# github.com/moby/sys/mountinfo v0.6.2
 github.com/moby/sys/mountinfo
+# github.com/moby/sys/signal v0.6.0
+github.com/moby/sys/signal
 # github.com/opencontainers/go-digest v1.0.0
 github.com/opencontainers/go-digest
-# github.com/opencontainers/image-spec v1.0.2
+# github.com/opencontainers/image-spec v1.1.0-rc2.0.20221005185240-3a7f492d3f1b
 github.com/opencontainers/image-spec/identity
 github.com/opencontainers/image-spec/specs-go
 github.com/opencontainers/image-spec/specs-go/v1
-# github.com/opencontainers/runc v1.0.2
+# github.com/opencontainers/runc v1.1.5
 github.com/opencontainers/runc/libcontainer/user
 # github.com/opencontainers/runtime-spec v1.0.3-0.20210326190908-1c3f411f0417
 ## explicit
 github.com/opencontainers/runtime-spec/specs-go
-# github.com/opencontainers/selinux v1.8.2
+# github.com/opencontainers/selinux v1.10.1
 github.com/opencontainers/selinux/go-selinux
 github.com/opencontainers/selinux/go-selinux/label
 github.com/opencontainers/selinux/pkg/pwalk
-# github.com/pelletier/go-toml v1.8.1
+github.com/opencontainers/selinux/pkg/pwalkdir
+# github.com/pelletier/go-toml v1.9.5
 ## explicit
 github.com/pelletier/go-toml
 # github.com/pkg/errors v0.9.1
 ## explicit
 github.com/pkg/errors
-# github.com/sirupsen/logrus v1.8.1
+# github.com/sirupsen/logrus v1.9.3
 ## explicit
 github.com/sirupsen/logrus
-# github.com/vishvananda/netlink v1.1.1-0.20201029203352-d40f9887b852
+# github.com/vishvananda/netlink v1.1.1-0.20210330154013-f5de75959ad5
 ## explicit
 github.com/vishvananda/netlink
 github.com/vishvananda/netlink/nl
-# github.com/vishvananda/netns v0.0.0-20200728191858-db3c7e526aae
+# github.com/vishvananda/netns v0.0.0-20210104183010-2eb08e3e575f
 github.com/vishvananda/netns
 # go.opencensus.io v0.24.0
 go.opencensus.io
@@ -165,7 +177,7 @@ go.opencensus.io/internal
 go.opencensus.io/trace
 go.opencensus.io/trace/internal
 go.opencensus.io/trace/tracestate
-# golang.org/x/net v0.5.0
+# golang.org/x/net v0.17.0
 golang.org/x/net/context/ctxhttp
 golang.org/x/net/http/httpguts
 golang.org/x/net/http2
@@ -173,23 +185,22 @@ golang.org/x/net/http2/hpack
 golang.org/x/net/idna
 golang.org/x/net/internal/timeseries
 golang.org/x/net/trace
-# golang.org/x/sync v0.1.0
+# golang.org/x/sync v0.3.0
 golang.org/x/sync/errgroup
 golang.org/x/sync/semaphore
-# golang.org/x/sys v0.4.0
+# golang.org/x/sys v0.13.0
 ## explicit
-golang.org/x/sys/internal/unsafeheader
+golang.org/x/sys/execabs
 golang.org/x/sys/unix
 golang.org/x/sys/windows
-# golang.org/x/text v0.6.0
+# golang.org/x/text v0.13.0
 golang.org/x/text/secure/bidirule
 golang.org/x/text/transform
 golang.org/x/text/unicode/bidi
 golang.org/x/text/unicode/norm
-# google.golang.org/genproto v0.0.0-20230110181048-76db0878b65f
+# google.golang.org/genproto/googleapis/rpc v0.0.0-20230711160842-782d3b101e98
 google.golang.org/genproto/googleapis/rpc/status
-# google.golang.org/grpc v1.53.0
-## explicit
+# google.golang.org/grpc v1.58.3
 google.golang.org/grpc
 google.golang.org/grpc/attributes
 google.golang.org/grpc/backoff
@@ -220,6 +231,7 @@ google.golang.org/grpc/internal/grpclog
 google.golang.org/grpc/internal/grpcrand
 google.golang.org/grpc/internal/grpcsync
 google.golang.org/grpc/internal/grpcutil
+google.golang.org/grpc/internal/idle
 google.golang.org/grpc/internal/metadata
 google.golang.org/grpc/internal/pretty
 google.golang.org/grpc/internal/resolver
@@ -239,7 +251,7 @@ google.golang.org/grpc/serviceconfig
 google.golang.org/grpc/stats
 google.golang.org/grpc/status
 google.golang.org/grpc/tap
-# google.golang.org/protobuf v1.28.1
+# google.golang.org/protobuf v1.31.0
 google.golang.org/protobuf/encoding/protojson
 google.golang.org/protobuf/encoding/prototext
 google.golang.org/protobuf/encoding/protowire
